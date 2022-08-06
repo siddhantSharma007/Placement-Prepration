@@ -1,0 +1,17 @@
+class Solution{
+    public static int doUnion(int a[], int n, int b[], int m) 
+    {
+       HashSet<Integer> obj=new HashSet<Integer>();  //create set
+      
+         for(int i=0;i<n;i++)
+         {
+             obj.add(a[i]);
+         }
+         
+         for(int i=0;i<m;i++)
+         {
+             obj.add(b[i]);
+         }
+         return obj.size();
+    }
+}
