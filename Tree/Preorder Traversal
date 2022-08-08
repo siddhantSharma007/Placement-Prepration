@@ -1,0 +1,16 @@
+
+class Solution {
+    ArrayList<Integer> obj=new ArrayList<>();
+    public List<Integer> preorderTraversal(TreeNode root) {
+        
+        if(root==null)
+        {
+            return obj;
+        }
+        obj.add(root.val);
+        preorderTraversal(root.left);
+        preorderTraversal(root.right);
+        
+        return obj;
+    }
+}
