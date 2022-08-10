@@ -1,0 +1,23 @@
+class Solution {
+    int median(int matrix[][], int r, int c) {
+             ArrayList<Integer> arrli= new ArrayList<>();
+       int med;
+       int mid;
+      for(int i=0;i<r;i++){
+          for(int j=0;j<c;j++){
+              arrli.add(matrix[i][j]);
+          }
+      }    
+      Collections.sort(arrli);
+      int l=arrli.size();
+      if(l%2==0){
+          mid=l/2;
+          med=(arrli.get(mid-1)+arrli.get(mid))/2;
+      }
+      else{
+          mid=l/2;
+          med=arrli.get(mid);
+      }
+      return med;
+   }
+}
