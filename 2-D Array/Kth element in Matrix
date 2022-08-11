@@ -1,0 +1,19 @@
+class Solution
+{
+	public static int kthSmallest(int[][]mat,int n,int k)
+	{
+       PriorityQueue<Integer> maxH = new PriorityQueue<>
+       (Collections.reverseOrder());
+        
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                maxH.offer(mat[i][j]);
+                
+                if(maxH.size() > k)
+                    maxH.poll();
+            }
+        }
+        
+        return maxH.peek();
+    }
+}
