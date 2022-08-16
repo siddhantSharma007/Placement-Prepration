@@ -1,0 +1,15 @@
+class Solution {
+    public int reverse(int x) {
+           long res = 0;
+        int resi = 0;
+        while (x != 0) {
+            int rem = x %10;
+           res =(res * 10) + rem;
+           resi =(resi * 10) + rem;
+            x /=10;
+        }
+        if (res>Integer.MAX_VALUE || res<Integer.MIN_VALUE) 
+            return 0;
+        return resi;
+    }
+}
