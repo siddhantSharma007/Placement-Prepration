@@ -1,0 +1,7 @@
+class Solution {
+    public int mySqrt(int x) {
+       double y=Math.sqrt(x);
+    int value = (int)y;
+        return value;
+    }
+}
