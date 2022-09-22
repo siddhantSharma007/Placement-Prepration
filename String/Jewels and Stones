@@ -1,0 +1,16 @@
+class Solution {
+    public int numJewelsInStones(String jewels, String stones) {
+        int res=0;
+        for(char J:jewels.toCharArray())
+        {
+            for(char S:stones.toCharArray())
+            {
+                if(J==S)
+                {
+                    res++;
+                }
+            }
+        }
+        return res;
+    }
+}
