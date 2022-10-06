@@ -1,0 +1,16 @@
+class Solution {
+    public int pivotIndex(int[] nums) {
+    int sum=0;
+          int checkLeftSum=0;
+           for(int num: nums){
+               sum +=num;
+       }
+           for(int i=0; i<nums.length; i++){
+              if(checkLeftSum == (sum-nums[i]-checkLeftSum)){
+         return i;
+      }
+         checkLeftSum +=nums[i];
+      }
+       return -1;
+     }
+  }
