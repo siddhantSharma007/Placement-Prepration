@@ -1,0 +1,25 @@
+class Solution {
+    static String armstrongNumber(int n){
+      int temp = n;
+
+        int res = 0;
+
+        while(n > 0){
+
+            int d = n % 10;
+
+            res += Math.pow(d,3);
+
+            n /= 10;
+
+        }
+
+        if(temp == res){
+
+            return "Yes";
+
+        }
+
+     return "No";
+    }
+}
