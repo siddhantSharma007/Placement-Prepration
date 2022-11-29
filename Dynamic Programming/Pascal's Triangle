@@ -1,0 +1,31 @@
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> res = new ArrayList();
+        if(numRows == 0) return res;
+        if(numRows >= 1) {
+            List<Integer> cur = new ArrayList();
+            cur.add(1);
+            res.add(cur);
+        }
+        if(numRows >= 2) {
+           List<Integer> cur = new ArrayList();
+            cur.add(1);
+            cur.add(1);
+            res.add(cur);
+        }
+        if(numRows >= 3) {
+            for(int i = 3; i <= numRows; i++) {
+               List<Integer> prev = res.get(i -2);
+               List<Integer> cur = new ArrayList();
+               cur.add(1);
+               for(int j = 0; j < i - 2;j++) {
+                   cur.add(prev.get(j) + prev.get(j+1));
+               } 
+               cur.add(1);
+                res.add(cur);
+            }
+            
+        }
+        return res;
+    }
+}
